@@ -1,5 +1,5 @@
 // Call the packages
- express    = require('express'),
+var express    = require('express'),
     app        = express(),
     bodyParser = require('body-parser'),
     morgan     = require('morgan'),
