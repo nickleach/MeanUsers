@@ -34,6 +34,16 @@ app.get('/', function(req, res){
 // get an instance of the express router
 var apiRouter = express.Router();
 
+//middleware to use for all requrests
+
+apiRouter.use(function (req, res, next){
+  //logging
+  console.log("someone just came to our app!");
+
+  //this is where we authenticate users
+  next();
+});
+
 apiRouter.get('/', function(req, res){
   res.json({ message: 'hooray! welcome to our api!'});
 });
